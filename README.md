@@ -1,5 +1,8 @@
 # Todolistapp
 
+<img src="https://github.com/almeidacavalcante/toDoListApp/blob/master/readmegif.gif" title="made at imgflip.com"/>
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
 ## Development server

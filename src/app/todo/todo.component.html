@@ -1,0 +1,23 @@
+<div class="jumbotron" style="padding: 45px 0px">
+  <h4 class="text-center">To Do List App</h4>
+</div>
+
+<div class="input-group">
+  <input type="text" name="" id="" class="form-control" #itemTitle (keydown)="keyPressListener($event, itemTitle)" placeholder="Press Enter to add a new task">
+</div>
+
+<div style="margin:15px 0px">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of toDoListArray" (click)="toggleCheck(item.$key, item.isChecked)">
+
+      <span class="hover-cursor" [class.text-success]="item.isChecked">
+          <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+      </span>
+      {{item.title}}
+
+      <span class="hover-cursor text-danger pull-right" (click)="onDelete(item.$key, $event)">
+        <i class="fa fa-trash-o fa-lg up-z"></i>
+      </span>
+    </li>
+  </ul>
+</div>
